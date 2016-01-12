@@ -1,0 +1,22 @@
+IONIC_PATH='/Users/brad.beeler/Sites/ionic_collab/'
+AJM_PATH='/Users/brad.beeler/Sites/angular-jitsi-meet/'
+function lajm {
+    CWD=$(pwd)
+    cd $IONIC_PATH
+    AJM_VER=$(grep angular-jitsi-meet package.json | gawk 'match($2, /(npm:angular-jitsi-meet@[0-9]{,3}\.[0-9]{,3}\.[0-9]{,3})/, ary) {print ary[1]}')
+    echo $AJM_VER
+    cd $AJM_PATH
+    jspm link -y $AJM_VER
+    cd $IONIC_PATH
+    jspm install -y --link $AJM_VER
+    cd $CWD
+}
+
+function ulajm {
+    CWD=$(pwd)
+    cd $IONIC_PATH
+    AJM_VER=$(grep angular-jitsi-meet package.json | gawk 'match($2, /(npm:angular-jitsi-meet@[0-9]{,3}\.[0-9]{,3}\.[0-9]{,3})/, ary) {print ary[1]}')
+    echo "Unlinking $AJM_VER"
+    jspm install --unlink -y $AJM_VER
+    cd $CWD
+}
