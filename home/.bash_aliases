@@ -23,9 +23,13 @@ alias rmpp="rm -rf ~/Library/MobileDevice/Provisioning\ Profiles"
 
 alias vi="vim -p"
 
+# OS Aliases
+alias stopSpotlight="sudo mdutil -a -i off"
+alias startSpotlight="sudo mdutil -a -i on"
+
+alias eh="sudo vi /etc/hosts"
 alias ..="cd ../"
 alias ...="cd ../../"
-
 alias ll="ls -alh"
 
 function rtack {
