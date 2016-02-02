@@ -196,8 +196,8 @@ nnoremap to  :tabo<CR>
 "nnoremap tn :tabnew<CR>
 
 " Buffer Section
-"nnoremap bh :bp<CR>
-"nnoremap bl :bn<CR>
+nnoremap bh :bp<CR>
+nnoremap bl :bn<CR>
  
 " Visually Select by Words like windoze
 imap <C-S-Right> <C-O>w

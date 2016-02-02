@@ -3,6 +3,10 @@ alias cdjm="cd /Users/brad.beeler/Sites/jitsi-meet"
 alias cdajm="cd /Users/brad.beeler/Sites/angular-jitsi-meet"
 alias cdios="cd /Users/brad.beeler/Sites/ios-collab"
 
+alias cc="cd $HOME/Sites/cc"
+alias tcce="tail -n 100 -f /usr/local/tomcat/logs/cc.out"
+alias lcce="less /usr/local/tomcat/logs/cc.out"
+
 # Git Aliases
 alias gup="git pull"
 alias gc="git commit -a"
