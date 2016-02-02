@@ -29,6 +29,10 @@ Plugin 'xolox/vim-misc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 
+"RAINBOW PARRENS
+Plugin 'luochen1990/rainbow'
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+
 "COLOR SCHEMES
 Plugin 'altercation/vim-colors-solarized'
 
