@@ -23,14 +23,17 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'bkad/CamelCaseMotion'
 Plugin 'luochen1990/rainbow'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'sheerun/vim-polyglot'
+"Plugin 'sheerun/vim-polyglot'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-misc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 "COLOR SCHEMES
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
+"colorscheme solarized
+colorscheme default
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -76,6 +79,7 @@ set tabpagemax=30   " Max number of tabs to open when starting vim
 set clipboard=unnamed " Make clipboard work with all operations
 set iskeyword+=-   " Add the '-' as a word boundry
 set hlsearch        " set highlightseaarch
+set smarttab
 set expandtab       " tabs turn into spaces
 set shiftround      " When indenting do it better
 set title
@@ -92,7 +96,6 @@ set nobackup
 set noswapfile
 syntax enable
 set background=dark
-"colorscheme solarized
 "set gdefault        " set /g on seach/replace
 "set autowrite      " Automatically save before commands like :next and :make
 "set hidden         " Hide buffers when they are abandoned
@@ -180,8 +183,8 @@ nnoremap <C-T> :tabnew<CR>
 nnoremap <S-Right> :tabnext<CR>
 nnoremap <S-Left> :tabprevious<CR>
 nnoremap th  :tabprevious<CR>
-nnoremap tj  :tabfirst<CR>
-nnoremap tk  :tablast<CR>
+nnoremap tk  :tabfirst<CR>
+nnoremap tj  :tablast<CR>
 nnoremap tl  :tabnext<CR>
 nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnext<Space>
@@ -196,8 +199,9 @@ nnoremap to  :tabo<CR>
 "nnoremap tn :tabnew<CR>
 
 " Buffer Section
-nnoremap bh :bp<CR>
-nnoremap bl :bn<CR>
+" DO NOT ENABLE THIS MESSES WITH b/B for back
+"nnoremap bh :bp<CR>
+"nnoremap bl :bn<CR>
  
 " Visually Select by Words like windoze
 imap <C-S-Right> <C-O>w
@@ -295,6 +299,14 @@ let g:rainbow_conf = {
     \       'css': 0,
     \   }
     \}
+
+" Indent Guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_auto_colors = 0
+highlight IndentGuidesOdd   guibg=red     ctermbg=236
+highlight IndentGuidesEven  guibg=green ctermbg=235
  
 " snippets
 let g:UltiSnipsExpandTrigger="<Tab>"
