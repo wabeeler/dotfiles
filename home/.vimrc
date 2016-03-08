@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'bkad/CamelCaseMotion'
@@ -98,7 +99,7 @@ syntax enable
 set background=dark
 "set gdefault        " set /g on seach/replace
 "set autowrite      " Automatically save before commands like :next and :make
-"set hidden         " Hide buffers when they are abandoned
+set hidden         " Hide buffers when they are abandoned
 set cursorline
 
 
@@ -258,6 +259,9 @@ let g:syntastic_check_on_wq = 0
 
 "AIRLINE
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_buffers=2
+let g:airline_theme = 'molokai'
 
 " camelCASE Plugin
 "map <silent> w <Plug>CamelCaseMotion_w
