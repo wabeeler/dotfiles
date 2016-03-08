@@ -30,6 +30,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-surround'
 
 "COLOR SCHEMES
 "Plugin 'altercation/vim-colors-solarized'
