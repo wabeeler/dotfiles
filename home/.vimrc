@@ -33,6 +33,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "COLOR SCHEMES
 "Plugin 'altercation/vim-colors-solarized'
 "colorscheme solarized
+colorscheme default
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
