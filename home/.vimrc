@@ -66,7 +66,7 @@ filetype plugin indent on    " required
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sw=2 expandtab
-set ts=4 sw=4 expandtab  " Default tabs to 4
+set ts=2 sw=2 expandtab  " Default tabs to 4
 set numberwidth=5   " 5 cols wide for line numbers (includes space, not fixed width)
 set history=1000
 set matchtime=10
