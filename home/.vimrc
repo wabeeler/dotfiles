@@ -21,7 +21,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'Valloric/YouCompleteMe'
-"Plugin 'bkad/CamelCaseMotion'
+Plugin 'bkad/CamelCaseMotion'
 Plugin 'luochen1990/rainbow'
 Plugin 'airblade/vim-gitgutter'
 "Plugin 'sheerun/vim-polyglot'
@@ -265,12 +265,12 @@ let g:airline#extensions#tabline#show_buffers=2
 let g:airline_theme = 'molokai'
 
 " camelCASE Plugin
-"map <silent> w <Plug>CamelCaseMotion_w
-"map <silent> b <Plug>CamelCaseMotion_b
-"map <silent> e <Plug>CamelCaseMotion_e
-"sunmap w
-"sunmap b
-"sunmap e
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
   
 omap <silent> iw <Plug>CamelCaseMotion_iw
 xmap <silent> iw <Plug>CamelCaseMotion_iw
