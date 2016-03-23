@@ -181,29 +181,29 @@ nnoremap J mjJ`j
 nnoremap K i<cr><esc><right>
  
 " Tab Section
-nnoremap <C-T> :tabnew<CR>
-nnoremap <S-Right> :tabnext<CR>
-nnoremap <S-Left> :tabprevious<CR>
-nnoremap th  :tabprevious<CR>
-nnoremap tk  :tabfirst<CR>
-nnoremap tj  :tablast<CR>
-nnoremap tl  :tabnext<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap tn  :tabnext<Space>
-nnoremap tm  :tabm<Space>
-nnoremap tml :tabm<Space>+1<CR>
-nnoremap tmh :tabm<Space>-1<CR>
-nnoremap td  :tabclose<CR>
-nnoremap to  :tabo<CR>
-" Alternatively use
-"nnoremap th :tabnext<CR>
-"nnoremap tl :tabprev<CR>
-"nnoremap tn :tabnew<CR>
+"nnoremap <C-T> :tabnew<CR>
+"nnoremap <S-Right> :tabnext<CR>
+"nnoremap <S-Left> :tabprevious<CR>
+"nnoremap th  :tabprevious<CR>
+"nnoremap tk  :tabfirst<CR>
+"nnoremap tj  :tablast<CR>
+"nnoremap tl  :tabnext<CR>
+"nnoremap tt  :tabedit<Space>
+"nnoremap tn  :tabnext<Space>
+"nnoremap tm  :tabm<Space>
+"nnoremap tml :tabm<Space>+1<CR>
+"nnoremap tmh :tabm<Space>-1<CR>
+"nnoremap td  :tabclose<CR>
+"nnoremap to  :tabo<CR>
 
 " Buffer Section
-" DO NOT ENABLE THIS MESSES WITH b/B for back
-"nnoremap bh :bp<CR>
-"nnoremap bl :bn<CR>
+nnoremap <leader>b :buffers<CR>
+nnoremap <leader>. :e#<CR>
+nnoremap <leader>d :bdelete<CR>
+nnoremap <leader>t :enew<CR>
+
+nnoremap <leader>vs :vs<CR>
+nnoremap <leader>sp :split<CR>
  
 " Visually Select by Words like windoze
 imap <C-S-Right> <C-O>w
@@ -263,6 +263,18 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_buffers=2
 let g:airline_theme = 'molokai'
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+  nmap <leader>1 <Plug>AirlineSelectTab1
+  nmap <leader>2 <Plug>AirlineSelectTab2
+  nmap <leader>3 <Plug>AirlineSelectTab3
+  nmap <leader>4 <Plug>AirlineSelectTab4
+  nmap <leader>5 <Plug>AirlineSelectTab5
+  nmap <leader>6 <Plug>AirlineSelectTab6
+  nmap <leader>7 <Plug>AirlineSelectTab7
+  nmap <leader>8 <Plug>AirlineSelectTab8
+  nmap <leader>9 <Plug>AirlineSelectTab9
+  nmap <leader>- <Plug>AirlineSelectPrevTab
+  nmap <leader>+ <Plug>AirlineSelectNextTab
 
 " camelCASE Plugin
 map <silent> w <Plug>CamelCaseMotion_w
@@ -354,7 +366,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_working_path_mode = 'c'
+  "let g:ctrlp_working_path_mode = 'c'
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
