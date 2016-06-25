@@ -274,7 +274,7 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
   nmap <leader>8 <Plug>AirlineSelectTab8
   nmap <leader>9 <Plug>AirlineSelectTab9
   nmap <leader>- <Plug>AirlineSelectPrevTab
-  nmap <leader>+ <Plug>AirlineSelectNextTab
+  nmap <leader>= <Plug>AirlineSelectNextTab
 
 " camelCASE Plugin
 map <silent> w <Plug>CamelCaseMotion_w
@@ -362,8 +362,14 @@ nnoremap <leader>sc :CloseSession<CR>
 
 " CtrlP - ctrlp
 if executable('ag')
+"  let g:ctrlp_custom_ignore = {
+"    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"    \ 'file': '\v\.(exe|so|dll)$',
+"    \ 'link': 'some_bad_symbolic_links',
+"    \ }
+
   " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ag\ --nogroup\ --nocolor\ --ignore-dir\ \.git
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   "let g:ctrlp_working_path_mode = 'c'
