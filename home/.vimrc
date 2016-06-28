@@ -31,6 +31,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
 
 "COLOR SCHEMES
 "Plugin 'altercation/vim-colors-solarized'
@@ -204,6 +205,7 @@ nnoremap <leader>t :enew<CR>
 
 nnoremap <leader>vs :vs<CR>
 nnoremap <leader>sp :split<CR>
+nnoremap <leader>vr :vertical resize
  
 " Visually Select by Words like windoze
 imap <C-S-Right> <C-O>w
@@ -253,6 +255,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_loc_list_height=4
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -378,6 +381,14 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" Emmet Plugin
+"let g:user_emmet_mode='n'    "only enable normal mode functions.
+let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+"let g:user_emmet_mode='a'    "enable all function in all mode.
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-E>'
 
 " 03 - FUNCTIONS ===========================================
  
