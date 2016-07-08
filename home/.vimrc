@@ -200,12 +200,12 @@ nnoremap K i<cr><esc><right>
 " Buffer Section
 nnoremap <leader>b :buffers<CR>
 nnoremap <leader>. :e#<CR>
-nnoremap <leader>d :bdelete<CR>
+nnoremap <leader>d :bp\|:bd \#<CR>
 nnoremap <leader>t :enew<CR>
 
 nnoremap <leader>vs :vs<CR>
 nnoremap <leader>sp :split<CR>
-nnoremap <leader>vr :vertical resize
+nnoremap <leader>vr :vertical resize 
  
 " Visually Select by Words like windoze
 imap <C-S-Right> <C-O>w
