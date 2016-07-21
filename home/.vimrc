@@ -200,8 +200,9 @@ nnoremap K i<cr><esc><right>
 " Buffer Section
 nnoremap <leader>b :buffers<CR>
 nnoremap <leader>. :e#<CR>
-nnoremap <leader>d :bd<CR>
-nnoremap <leader>vd :bp\|:bd \#<CR>
+nnoremap <leader>d :lclose<bar>bd<CR>
+"nnoremap <leader>vd :bp\|:bd \#<CR>
+nnoremap <leader>vd :lclose<bar>b#<bar>bd #<CR>
 nnoremap <leader>t :enew<CR>
 
 nnoremap <leader>vs :vs<CR>
