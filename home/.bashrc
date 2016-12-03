@@ -12,8 +12,8 @@ export AWS_SECRET_ACCESS_KEY=ShQs1dHekUt27XxTmvNA+X9h9vxlHnfKkqGSEs1x
 # enable bash_aliases by uncom the next 3 lines GU 12/1/2008
 #
 #
-if [ -f ~/.bash_aliases ]; then
-. ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+. ~/.aliases
 fi
 
 if [ -f ~/.git-completion.bash ]; then
