@@ -198,7 +198,8 @@ nnoremap K i<cr><esc><right>
 "nnoremap to  :tabo<CR>
 
 " Buffer Section
-nnoremap <leader>b :buffers<CR>
+"nnoremap <leader>b :buffers<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>. :e#<CR>
 nnoremap <leader>d :lclose<bar>bd<CR>
 "nnoremap <leader>vd :bp\|:bd \#<CR>
