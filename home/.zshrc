@@ -92,3 +92,7 @@ fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
+
+if [ -f $HOME/.homesick/repos/docker-alias/zshrc ]; then
+  source "$HOME/.homesick/repos/docker-alias/zshrc"
+fi
