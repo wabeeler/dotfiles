@@ -79,7 +79,7 @@ set bs=2
 set scrolloff=5     " Try to show lines around the curent line for context
 set mouse=a         " Enable mouse usage (all modes) in terminals
 set tabpagemax=30   " Max number of tabs to open when starting vim
-set clipboard=unnamed " Make clipboard work with all operations
+" set clipboard=unnamed " Make clipboard work with all operations
 set iskeyword+=-   " Add the '-' as a word boundry
 set hlsearch        " set highlightseaarch
 set smarttab
@@ -258,11 +258,28 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_loc_list_height=4
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_check_on_open=1 " Load when opening a file
+let g:syntastic_enable_signs=1 " Show signs on Error Lines
+let g:syntastic_auto_loc_list=1 " Auto Open/Close Location List
+let g:syntastic_enable_balloons=1 " add tooltip balloons to lines
+let g:syntastic_enable_highlighting=1 " show highlighting on error line
+let g:syntastic_auto_jump=0 " Jump to Errors
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_php_checkers=['php']
+let g:syntastic_css_checkers=['']
+" let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol='☒'
+let g:syntastic_style_warning_symbol='⍄'
+"let g:syntastic_phpcs_conf="--standard=/home/rwalsh/saru_emt_web/phpcs.xml"
+"let g:syntastic_phpcs_conf="--standard=PSR2"
+
 
 "AIRLINE
 let g:airline#extensions#tabline#enabled = 1
@@ -337,25 +354,6 @@ let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
  
-" Syntastic
-let g:syntastic_check_on_open=1 " Load when opening a file
-let g:syntastic_enable_signs=1 " Show signs on Error Lines
-let g:syntastic_auto_loc_list=1 " Auto Open/Close Location List
-let g:syntastic_enable_balloons=1 " add tooltip balloons to lines
-let g:syntastic_enable_highlighting=1 " show highlighting on error line
-let g:syntastic_auto_jump=0 " Jump to Errors
-let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_php_checkers=['php']
-let g:syntastic_css_checkers=['']
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol='☒'
-let g:syntastic_style_warning_symbol='⍄'
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-"let g:syntastic_phpcs_conf="--standard=/home/rwalsh/saru_emt_web/phpcs.xml"
-"let g:syntastic_phpcs_conf="--standard=PSR2"
-
 " Session
 let g:session_directory = "~/.vim/sessions"
 let g:session_autoload = "no"

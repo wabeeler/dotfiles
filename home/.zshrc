@@ -34,7 +34,7 @@ DEFAULT_USER="wabeeler"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -54,6 +54,7 @@ DEFAULT_USER="wabeeler"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git, brew, docker, node, tmux)
+plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
