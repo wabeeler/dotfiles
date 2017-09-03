@@ -1,12 +1,3 @@
-alias cds="cd /Users/brad.beeler/Sites/ionic_collab"
-alias cdjm="cd /Users/brad.beeler/Sites/jitsi-meet"
-alias cdajm="cd /Users/brad.beeler/Sites/angular-jitsi-meet"
-alias cdios="cd /Users/brad.beeler/Sites/ios-collab"
-
-alias cc="cd $HOME/Sites/cc"
-alias tcce="tail -n 100 -f /usr/local/tomcat/logs/cc.out"
-alias lcce="less /usr/local/tomcat/logs/cc.out"
-
 # Git Aliases
 alias gup="git pull"
 alias gc="git commit -a"
@@ -21,9 +12,19 @@ alias gsl="git stash list"
 alias gsp="git stash pop"
 alias grhh="git reset --hard HEAD"
 
-# IOS Dev
-alias rmdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
-alias rmpp="rm -rf ~/Library/MobileDevice/Provisioning\ Profiles"
+#Docker Compose
+alias dc-son-up="docker-compose -f docker-compose.yml -f docker-compose.son.yml up -d"
+alias dc-son-dn="docker-compose -f docker-compose.yml -f docker-compose.son.yml down"
+alias dc-cms-up="docker-compose -f docker-compose.yml -f docker-compose.cms.yml up -d"
+alias dc-cms-dn="docker-compose -f docker-compose.yml -f docker-compose.cms.yml down"
+alias dc-all-up="docker-compose -f docker-compose.yml -f docker-compose.all.yml up -d"
+alias dc-all-dn="docker-compose -f docker-compose.yml -f docker-compose.all.yml down"
+alias dc-tst-up="docker-compose -f docker-compose.yml -f docker-compose.core.yml up -d"
+alias dc-tst-dn="docker-compose -f docker-compose.yml -f docker-compose.core.yml down"
+alias dc-tst-lg="docker-compose -f docker-compose.yml -f docker-compose.core.yml logs -f"
+alias dc-csg-up="docker-compose -f docker-compose.yml -f docker-compose.csg.yml up -d"
+alias dc-csg-dn="docker-compose -f docker-compose.yml -f docker-compose.csg.yml down"
+alias dc-csg-lg="docker-compose -f docker-compose.yml -f docker-compose.csg.yml logs -f"
 
 alias vi="vim -p"
 

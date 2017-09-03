@@ -33,6 +33,12 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+
 "COLOR SCHEMES
 "Plugin 'altercation/vim-colors-solarized'
 "colorscheme solarized
@@ -69,6 +75,7 @@ filetype plugin indent on    " required
 "GENERAL SETTINGS
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-node javascript javascript-jasmine
 autocmd Filetype coffee setlocal ts=2 sw=2 expandtab
 set ts=2 sw=2 expandtab  " Default tabs to 4
 set numberwidth=5   " 5 cols wide for line numbers (includes space, not fixed width)
@@ -348,10 +355,14 @@ let g:indent_guides_auto_colors = 0
 highlight IndentGuidesOdd   guibg=red     ctermbg=236
 highlight IndentGuidesEven  guibg=green ctermbg=235
  
-" snippets
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+" UtiliSnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-f>"
+let g:UltiSnipsJumpForwardTrigger="<C-f>"
+let g:UltiSnipsJumpBackwardTrigger="<C-g>"
+
+" If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
  
 " Session
@@ -390,6 +401,9 @@ let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_leader_key='<C-E>'
+
+"YouCompleteMe Options
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " 03 - FUNCTIONS ===========================================
  
