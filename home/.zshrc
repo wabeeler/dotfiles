@@ -97,3 +97,6 @@ fi
 if [ -f $HOME/.homesick/repos/docker-alias/zshrc ]; then
   source "$HOME/.homesick/repos/docker-alias/zshrc"
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
