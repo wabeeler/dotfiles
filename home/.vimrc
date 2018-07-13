@@ -32,6 +32,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
+Plugin 'mileszs/ack.vim'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -423,6 +424,14 @@ function! ToggleMouse()
   endif
   execute "GitGutterToggle"
 endfunction
+
+" ACK to use AG
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
  
 " Toggle Line Numbers
 " Default to have both on

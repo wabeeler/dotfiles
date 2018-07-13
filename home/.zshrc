@@ -94,6 +94,11 @@ if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
 
+if [ -f ~/.aliases_flowhub ]; then
+  . ~/.aliases_flowhub
+fi
+
+
 if [ -f $HOME/.homesick/repos/docker-alias/zshrc ]; then
   source "$HOME/.homesick/repos/docker-alias/zshrc"
 fi
