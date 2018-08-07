@@ -56,6 +56,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 plugins+=(docker)
 plugins+=(node)
+plugins+=(brew)
 plugins+=(zsh-nvm)
 plugins+=(osx)
 plugins+=(kubectl)

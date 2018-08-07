@@ -11,6 +11,7 @@ alias gss="git stash save"
 alias gsl="git stash list"
 alias gsp="git stash pop"
 alias grhh="git reset --hard HEAD"
+<<<<<<< HEAD
 alias gfix="git diff --name-only | uniq | xargs vim"
 
 #Docker Compose
@@ -35,6 +36,8 @@ alias dc-smb-up="docker-compose -f docker-compose.yml -f docker-compose.smb.yml 
 alias dc-smb-dn="docker-compose -f docker-compose.yml -f docker-compose.smb.yml down"
 alias dc-smb-lg="docker-compose -f docker-compose.yml -f docker-compose.smb.yml logs -f"
 
+alias gcam="git commit -am"
+
 alias vi="vim -p"
 
 # OS Aliases
@@ -42,23 +45,4 @@ alias stopSpotlight="sudo mdutil -a -i off"
 alias startSpotlight="sudo mdutil -a -i on"
 
 alias eh="sudo vi /etc/hosts"
-alias ..="cd ../"
-alias ...="cd ../../"
 alias ll="ls -alh"
-
-function rtack {
-    if [ -z $1 ]; then
-        echo "Useage rtack SEARCHSTRING"
-    else
-        if [ -d "src/app/components" ]; then
-           cmd="ack ${1} src/app/components/"
-           eval $cmd
-           echo "Searing SRC for ${1}"
-        else
-            cmd="ack ${1}"
-            eval $cmd
-        fi
-    fi
-}
-
-source ~/.bash_ajm
