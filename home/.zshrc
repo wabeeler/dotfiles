@@ -53,9 +53,12 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, brew, docker, node)
+plugins=(git)
+plugins+=(docker)
+plugins+=(node)
 plugins+=(zsh-nvm)
 plugins+=(osx)
+plugins+=(kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +102,10 @@ if [ -f ~/.aliases_flowhub ]; then
   . ~/.aliases_flowhub
 fi
 
+if [ -f ~/.aliases_docker ]; then
+  . ~/.aliases_docker
+fi
+
 
 if [ -f $HOME/.homesick/repos/docker-alias/zshrc ]; then
   source "$HOME/.homesick/repos/docker-alias/zshrc"
@@ -109,3 +116,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bbeeler/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/bbeeler/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bbeeler/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/bbeeler/google-cloud-sdk/completion.zsh.inc'; fi
