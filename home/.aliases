@@ -11,28 +11,7 @@ alias gss="git stash save"
 alias gsl="git stash list"
 alias gsp="git stash pop"
 alias grhh="git reset --hard HEAD"
-
-#Docker Compose
-alias dc-son-up="docker-compose -f docker-compose.yml -f docker-compose.son.yml up -d"
-alias dc-son-dn="docker-compose -f docker-compose.yml -f docker-compose.son.yml down"
-alias dc-son-lg="docker-compose -f docker-compose.yml -f docker-compose.son.yml logs -f"
-alias dc-cms-up="docker-compose -f docker-compose.yml -f docker-compose.cms.yml up -d"
-alias dc-cms-dn="docker-compose -f docker-compose.yml -f docker-compose.cms.yml down"
-alias dc-cms-lg="docker-compose -f docker-compose.yml -f docker-compose.cms.yml logs -f"
-alias dc-all-up="docker-compose -f docker-compose.yml -f docker-compose.all.yml up -d"
-alias dc-all-dn="docker-compose -f docker-compose.yml -f docker-compose.all.yml down"
-alias dc-tst-up="docker-compose -f docker-compose.yml -f docker-compose.core.yml up -d"
-alias dc-tst-dn="docker-compose -f docker-compose.yml -f docker-compose.core.yml down"
-alias dc-tst-lg="docker-compose -f docker-compose.yml -f docker-compose.core.yml logs -f"
-alias dc-csg-up="docker-compose -f docker-compose.yml -f docker-compose.csg.yml up -d"
-alias dc-csg-dn="docker-compose -f docker-compose.yml -f docker-compose.csg.yml down"
-alias dc-csg-lg="docker-compose -f docker-compose.yml -f docker-compose.csg.yml logs -f"
-alias dc-da-up="docker-compose -f docker-compose.yml -f docker-compose.da.yml up -d"
-alias dc-da-dn="docker-compose -f docker-compose.yml -f docker-compose.da.yml down"
-alias dc-da-lg="docker-compose -f docker-compose.yml -f docker-compose.da.yml logs -f"
-alias dc-smb-up="docker-compose -f docker-compose.yml -f docker-compose.smb.yml up -d"
-alias dc-smb-dn="docker-compose -f docker-compose.yml -f docker-compose.smb.yml down"
-alias dc-smb-lg="docker-compose -f docker-compose.yml -f docker-compose.smb.yml logs -f"
+alias gcam="git commit -am"
 
 alias vi="vim -p"
 
@@ -41,23 +20,4 @@ alias stopSpotlight="sudo mdutil -a -i off"
 alias startSpotlight="sudo mdutil -a -i on"
 
 alias eh="sudo vi /etc/hosts"
-alias ..="cd ../"
-alias ...="cd ../../"
 alias ll="ls -alh"
-
-function rtack {
-    if [ -z $1 ]; then
-        echo "Useage rtack SEARCHSTRING"
-    else
-        if [ -d "src/app/components" ]; then
-           cmd="ack ${1} src/app/components/"
-           eval $cmd
-           echo "Searing SRC for ${1}"
-        else
-            cmd="ack ${1}"
-            eval $cmd
-        fi
-    fi
-}
-
-source ~/.bash_ajm
