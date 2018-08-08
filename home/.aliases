@@ -11,7 +11,7 @@ alias gss="git stash save"
 alias gsl="git stash list"
 alias gsp="git stash pop"
 alias grhh="git reset --hard HEAD"
-alias gfix="git diff --name-only | uniq | xargs vim"
+alias gfix="vim $(git diff --name-only | uniq)"
 
 #Docker Compose
 alias dc-son-up="docker-compose -f docker-compose.yml -f docker-compose.son.yml up -d"

@@ -9,7 +9,7 @@ export ZSH=/Users/bbeeler/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
-DEFAULT_USER="bbeeler"
+#DEFAULT_USER="bbeeler"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -107,10 +107,9 @@ if [ -f ~/.aliases_docker ]; then
   . ~/.aliases_docker
 fi
 
-
-if [ -f $HOME/.homesick/repos/docker-alias/zshrc ]; then
-  source "$HOME/.homesick/repos/docker-alias/zshrc"
-fi
+#if [ -f $HOME/.homesick/repos/docker-alias/zshrc ]; then
+#  source "$HOME/.homesick/repos/docker-alias/zshrc"
+#fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
