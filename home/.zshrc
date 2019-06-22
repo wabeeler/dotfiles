@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/bbeeler/.oh-my-zsh
+export ZSH=/Users/wabeeler/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -57,7 +57,7 @@ plugins=(git)
 plugins+=(docker)
 plugins+=(node)
 plugins+=(brew)
-plugins+=(zsh-nvm)
+#plugins+=(zsh-nvm)
 plugins+=(osx)
 plugins+=(kubectl)
 
