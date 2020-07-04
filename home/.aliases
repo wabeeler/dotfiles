@@ -45,3 +45,10 @@ alias startSpotlight="sudo mdutil -a -i on"
 
 alias eh="sudo vi /etc/hosts"
 alias ll="ls -alh"
+
+#Last Pass Aliases
+alias lpcp="lpass ls Shared-HJM_Sites/Server"
+alias lpst="lpass show 711714742575056607"
+alias lpsl="lpass show 4869082874586229230"
+alias lpdb="lpass show 3106477193920818240"
+alias lpbkup="lpass show 1047252979063353194"
