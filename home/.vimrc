@@ -35,9 +35,9 @@ Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim'
 
 " Track the engine.
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+" Plugin 'honza/vim-snippets'
 
 
 "COLOR SCHEMES
@@ -359,9 +359,9 @@ highlight IndentGuidesEven  guibg=green ctermbg=235
 
 " UtiliSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<C-f>"
-let g:UltiSnipsJumpForwardTrigger="<C-f>"
-let g:UltiSnipsJumpBackwardTrigger="<C-g>"
+" let g:UltiSnipsExpandTrigger="<C-f>"
+" let g:UltiSnipsJumpForwardTrigger="<C-f>"
+" let g:UltiSnipsJumpBackwardTrigger="<C-g>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
