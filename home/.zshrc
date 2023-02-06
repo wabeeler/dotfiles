@@ -22,6 +22,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Set env before plugin
 export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # export NVM_AUTOLOAD=true
 zstyle ':omz:plugins:nvm' autoload true
 
@@ -77,7 +79,7 @@ plugins+=(brew)
 plugins+=(nvm)
 plugins+=(macos)
 plugins+=(kubectl)
-plugins+=(pnpm)
+# plugins+=(pnpm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,12 +132,12 @@ if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
 
-if [ -f ~/.aliases_flowhub ]; then
-  . ~/.aliases_flowhub
-fi
-
 if [ -f ~/.aliases_docker ]; then
   . ~/.aliases_docker
+fi
+
+if [ -f ~/.aliases_pnpm ]; then
+  . ~/.aliases_pnpm
 fi
 
 #if [ -f $HOME/.homesick/repos/docker-alias/zshrc ]; then
